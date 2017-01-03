@@ -6,7 +6,7 @@ set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
 call dein#begin(expand('~/.vim'))
 
-call dein#add('Shougo/neosnippet.vim') 
+"call dein#add('Shougo/neosnippet.vim') 
 call dein#add('davidhalter/jedi-vim')
 call dein#add('kevinw/pyflakes-vim')
 
@@ -41,6 +41,11 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set helplang=en
+
+"  key mapping
+nnoremap <Space> $
+nnoremap t <C-a>
+
 
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
