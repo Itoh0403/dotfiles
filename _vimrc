@@ -8,6 +8,7 @@ call dein#begin(expand('~/.vim'))
 
 call dein#add('Shougo/neosnippet.vim') 
 call dein#add('davidhalter/jedi-vim')
+call dein#add('kevinw/pyflakes-vim')
 
 if dein#check_install()
   call dein#install()
@@ -52,7 +53,7 @@ augroup vimrcEx
   \ exe "normal g`\"" | endif
 augroup END
 
-hi Matchparen ctermfg=blue ctermbg=blue
+hi Matchparen ctermfg=green ctermbg=red
 
 "if &compatible
 "  set nocompatible
