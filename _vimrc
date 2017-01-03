@@ -9,7 +9,6 @@ call dein#begin(expand('~/.vim'))
 call dein#add('Shougo/neosnippet.vim') 
 call dein#add('davidhalter/jedi-vim')
 call dein#add('kevinw/pyflakes-vim')
-call dein#add('Yggdroot/indentLine')
 
 if dein#check_install()
   call dein#install()
