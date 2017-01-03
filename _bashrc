@@ -1,0 +1,6 @@
+# .bashrc
+
+# user aliases and functions
+alias tf='source ~/tensorflow/bin/activate'
+alias ls='ls -G'
+
