@@ -33,6 +33,8 @@ set wrapscan
 set ignorecase
 set smartcase
 set clipboard=unnamed
+set wildmenu
+set wildmode=list:full
 
 set hidden
 set history=2000
