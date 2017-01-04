@@ -64,7 +64,7 @@ set shiftwidth=2
 set helplang=en
 
 "  key mapping
-nnoremap <Space> $
+map <Space> $
 nnoremap t <C-a>
 
 
