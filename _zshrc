@@ -3,8 +3,9 @@
 # user aliases and functions
 autoload -U compinit
 compinit
-PROMPT='%F{magenta}[%n:%c]$%f'
 alias tf='source ~/tensorflow/bin/activate'
 alias ls='ls -G'
 
 GURL='https://github.com/Itoh0403'
+
+bindkey -v
