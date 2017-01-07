@@ -1,0 +1,28 @@
+# .zsh_profile
+
+# Get the aliases and functions
+if [ -f ~/.zshrc ]; then
+    . ~/.zshrc
+fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH=$PATH:/Applications/Eclipse.app/Contents/MacOS
+export PATH=$PATH:/Users/Itoh/tclscript
+export PATH=$PATH:/$PYENV_ROOT/bin
+export XDG_CONFIG_HOME=~/.config
+
+eval "$(pyenv init -)"
+
+function zle-line-init zle-keymap-select {
+  case $KEYMAP in
+    vicmd)
+    PROMPT="%F{magenta}[%n:%c/%f%F{red}NOR%f%F{magenta}]$%f"
+    ;;
+    main|viins)
+    PROMPT="%F{magenta}[%n:%c/%f%F{cyan}INS%f%F{magenta}]$%f"
+    ;;
+  esac
+  zle reset-prompt
+}
+zle -N zle-line-init
+zle -N zle-keymap-select
