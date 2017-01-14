@@ -5,6 +5,7 @@ if [ -f ~/.zshrc ]; then
     . ~/.zshrc
 fi
 
+export PATH=/usr/local/bin:$PATH
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH=$PATH:/Applications/Eclipse.app/Contents/MacOS
 export PATH=$PATH:/Users/Itoh/tclscript
