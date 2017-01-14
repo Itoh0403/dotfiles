@@ -4,6 +4,11 @@ endif
 
 set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 
+"python3 support"
+let g:python3_host_prog = expand('~/.pyenv/shims/python3')
+
+""let $PATH = "~/.pyenv/shims:".$PATH
+
 let s:dein_dir = expand('~/.vim')
 
 let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
@@ -23,17 +28,9 @@ if dein#load_state(s:dein_dir)
 endif
 
 
-"call dein#begin(expand('~/.vim'))
-
-"call dein#add('Shougo/neosnippet.vim') 
-"call dein#add('davidhalter/jedi-vim')
-"call dein#add('kevinw/pyflakes-vim')
-
 if dein#check_install()
   call dein#install()
 endif
-
-"call dein#end()
 
 syntax on
 set number
@@ -54,6 +51,8 @@ set smartcase
 set clipboard=unnamed
 set wildmenu
 set wildmode=list:full
+set backspace=indent,eol,start
+set cursorline
 
 set hidden
 set history=2000
@@ -67,12 +66,15 @@ set helplang=en
 map <Space> $
 nnoremap t <C-a>
 
+"  python setting
 
 inoremap { {}<LEFT>
 inoremap ( ()<LEFT>
 inoremap " ""<LEFT>
 inoremap ' ''<LEFT>
 inoremap [ []<LEFT>
+
+let g:python_highlight_all = 1
 
 augroup vimrcEx
   au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -81,11 +83,3 @@ augroup END
 
 hi Matchparen ctermfg=green ctermbg=red
 
-"if &compatible
-"  set nocompatible
-"endif
-"set runtimepath+=~/.vim/dein/dein.vim
-
-"call dein#begin(expand('~/.vim'))
-
-"call dein#end()
