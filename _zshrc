@@ -5,6 +5,9 @@ autoload -U compinit
 compinit
 alias tf='source ~/tensorflow/bin/activate'
 alias ls='ls -G'
+#alias vim='nvim'
+#alias vi='nvim'
+#alias python='python3'
 
 GURL='https://github.com/Itoh0403'
 
