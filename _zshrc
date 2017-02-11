@@ -5,6 +5,7 @@ autoload -U compinit
 compinit
 alias tf='source ~/tensorflow/bin/activate'
 alias ls='ls -G'
+alias getwf='python3 ~/python/dl_weather.py'
 #alias vim='nvim'
 #alias vi='nvim'
 #alias python='python3'
